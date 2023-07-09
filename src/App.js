@@ -2,6 +2,7 @@ import Home from "./pages/home/Home";
 import Login from "./pages/login/Login";
 import List from "./pages/list/List";
 import New from "./pages/new/New";
+import Register from "./pages/register/Register";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./style/dark.scss";
 import { useContext } from "react";
@@ -17,6 +18,8 @@ function App() {
           <Route path="/">
             <Route index element={<Home />} />
             <Route path="login" element={<Login />} />
+            <Route path="register" element={<Register />} />
+
             <Route path="customer">
               <Route index element={<List />} />
             </Route>
@@ -31,6 +34,9 @@ function App() {
             </Route>
             <Route path="active">
               <Route index element={<List />} />
+            </Route>
+            <Route path="new">
+              <Route index element={<New />} />
             </Route>
           </Route>
         </Routes>
